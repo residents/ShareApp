@@ -43,7 +43,7 @@ function connectToSse(){
 	evtSource.onmessage = (event) => {
 		let newArrAudios = JSON.parse(event.data);
 		console.log(arrAudios.files.length, newArrAudios.files.length);
-		if(arrAudios.files.length < newArrAudios.files.length){
+		if(arrAudios.files.length != newArrAudios.files.length){
 			arrAudios = newArrAudios;
 			initGrid();
 		}
@@ -67,17 +67,17 @@ function initGrid(){
 			sufijo = 'mb';
 		}
 		let urlToFile = window.location.href + '../' + arrAudios.folder + element.filename;
-		card.innerHTML = `<div class="card text-bg-light border-darkx shadow-lg ml-1">
+		card.innerHTML = `<div class="card text-bg-light border-darkx shadow-lg ml-1 mb-2">
 			<div class="card-body">
-				<p class="card-title">${element.filename}</p>
+				<p class="card-title text-center text-bold">${element.filename}</p>
 				<h6 class="card-subtitle mb-2 text-body-secondary">
 					<audio class="w-100" src="../${arrAudios.folder}${element.filename}" controls >
 	  					Your browser does not support the <code>audio</code> element.
 					</audio>
 				</h6>
 				<hr />
-				<p class="card-subtitle mb-2">Carpeta: ${folder}</p>
-				<p class="card-subtitle mb-2">Tamaño: ${size.toFixed(2)} ${sufijo}</p>
+				<p class="card-subtitle mb-2"><small>Carpeta: ${folder}</small></p>
+				<p class="card-subtitle mb-2"><small>Tamaño: ${size.toFixed(2)} ${sufijo}</small></p>
 				<hr />
 				<div class="row">
 					<a href="javascript:;" onclick="openModalQr(this, '${urlToFile}', '${element.filename}')" class="card-link btn btn-primary col">Mostrar QR</a>

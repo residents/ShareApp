@@ -6,14 +6,12 @@
 
 	//$counter = 5;
 	while (true) {
-	  // Every second, send a "ping" event.
 
 	  /*echo "event: ping\n";
 	  $curDate = date(DATE_ISO8601);
 	  echo 'data: {"time": "' . $curDate . '"}';
 	  echo "\n\n";*/
 
-	  // Send a simple message at random intervals.
 
 	  //$counter--;
 
@@ -26,8 +24,6 @@
 	      ob_end_flush();
 	  }
 	  flush();
-
-	  // Break the loop if the client aborted the connection (closed the page)
 
 	  if (connection_aborted()) break;
 
