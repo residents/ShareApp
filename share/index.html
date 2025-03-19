@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Share app v1.0</title>
+		<link rel="stylesheet" href="../assets/css/bootstrap.min.css" type="text/css" />
+		<link rel="stylesheet" href="../assets/css/sweetalert2.min.css" type="text/css" >
+		<link rel="stylesheet" href="../assets/css/app.css" type="text/css" >
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-12 pt-3">
+					<h1 class="text-center">Share app V 1.0.1</h1>
+					<h2 class="text-center">Seleccione un archivo para compartir.</h2>
+				</div>
+			</div>
+			<div class="row pt-3 border border-2 rounded-2" id="ContainerCards">
+			
+			</div>
+		</div>
+		<div id="ModalQr" class="modal fade" tabindex="-1">
+			<div class="modal-dialog modal-fullscreen">
+				<div class="modal-content">
+      				<div class="modal-header justify-content-center">
+	      				<h1 class="modal-title fs-5 text-center" id="TitleModal">Qr</h1>
+	        			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+  					</div>
+      				<div class="modal-body">
+      					<div class="row justify-content-center">
+							<div id="QrCode" class="qr-code col"></div>
+      					</div>
+					</div>
+					<div class="modal-footer justify-content-center">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+					</div>
+			    </div>
+			</div>
+		</div>
+		
+
+		<script src="../assets/js/bootstrap.min.js"></script>
+		<script src="../assets/js/sweetalert2.all.min.js"></script>
+		<script src="../assets/js/qrcode.min.js"></script>
+		<script src="../assets/js/share.js"></script>
+		
+	</body>
+</html>

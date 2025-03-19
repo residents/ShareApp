@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Share app v1.0</title>
+		<link rel="stylesheet" href="./assets/css/bootstrap.min.css" type="text/css" />
+		<link rel="stylesheet" href="./assets/css/dropzone.css" type="text/css" />
+		<link rel="stylesheet" href="./assets/css/sweetalert2.min.css" type="text/css" >
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-12 pt-3">
+					<h1 class="text-center">Share app V 1.0.1</h1>
+					<h2 class="text-center">Seleccione o arrastre sus archivos al contenedor.</h2>
+					<p class="text-center">Tamaño maximo de archivo: <code>20mb</code>, Formato de archivo: <code>*.mp3</code> </p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12">
+					<form action="./upload.php" class="dropzone" id="form-dropzone">
+						<div class="fallback">
+							<input name="file" type="file" multiple />
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<script src="./assets/js/dropzone-min.js"></script>
+		<script src="./assets/js/sweetalert2.all.min.js"></script>
+		<script src="./assets/js/app.js"></script>
+		
+	</body>
+</html>
