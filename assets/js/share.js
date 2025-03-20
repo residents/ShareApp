@@ -20,8 +20,8 @@ const modalQr = new bootstrap.Modal('#ModalQr', {
 
 var qrcode = new QRCode(document.getElementById("QrCode"), {
     text: window.location.href,
-    width: parseInt(screen.height * 0.5),
-    height: parseInt(screen.height * 0.5),
+    width: parseInt(screen.height * 0.3),
+    height: parseInt(screen.height * 0.3),
     colorDark : "#000000",
     colorLight : "#ffffff",
     correctLevel : QRCode.CorrectLevel.H
